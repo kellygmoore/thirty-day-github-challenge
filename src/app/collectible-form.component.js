@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var collectible_1 = require('./collectible');
 var CollectibleFormComponent = (function () {
     function CollectibleFormComponent() {
-        // powers = ['Really Smart', 'Super Flexible',
-        //           'Super Hot', 'Weather Changer'];
-        //model = new Collectible(18, 'Dr IQ', this.value[0], 'Chuck Overstreet');
+        this.worth = ['High Value', 'Keepsake', 'Giveaway'];
+        this.model = new collectible_1.Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
         this.submitted = false;
     }
     CollectibleFormComponent.prototype.onSubmit = function () { this.submitted = true; };

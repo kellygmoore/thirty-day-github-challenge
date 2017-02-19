@@ -1,9 +1,9 @@
 "use strict";
 var Collectible = (function () {
-    function Collectible(id, name, worth, description, located) {
+    function Collectible(id, name, num, description, located) {
         this.id = id;
         this.name = name;
-        this.worth = worth;
+        this.num = num;
         this.description = description;
         this.located = located;
     }

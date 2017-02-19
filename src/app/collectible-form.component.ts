@@ -9,10 +9,9 @@ import { Collectible }    from './collectible';
 })
 export class CollectibleFormComponent {
 
-  // powers = ['Really Smart', 'Super Flexible',
-  //           'Super Hot', 'Weather Changer'];
-
-  //model = new Collectible(18, 'Dr IQ', this.value[0], 'Chuck Overstreet');
+  worth = ['High Value', 'Keepsake', 'Giveaway'];
+  
+  model = new Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
 
   submitted = false;
 

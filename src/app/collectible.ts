@@ -3,7 +3,7 @@ export class Collectible {
   constructor(
     public id: number,
     public name: string,
-    public worth: string,
+    public num: string,
     public description?: string,
     public located?: string
   ) {  }

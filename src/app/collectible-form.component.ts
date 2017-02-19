@@ -9,8 +9,8 @@ import { Collectible }    from './collectible';
 })
 export class CollectibleFormComponent {
 
-  worth = ['High Value', 'Keepsake', 'Giveaway'];
-  
+  worth = ['High Value', 'Heirloom', 'Keepsake', 'Giveaway'];
+
   model = new Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
 
   submitted = false;

@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var CollectibleViewComponent = (function () {
+    function CollectibleViewComponent() {
     }
-    AppComponent = __decorate([
+    CollectibleViewComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "<h1>Kelly's Collectibles</h1>\n\t  <nav>\n\t\t<a routerLink=\"/collectible-view\" routerLinkActive=\"active\">View Collectible Item</a>\n\t\t<a routerLink=\"/collectible-form\" routerLinkActive=\"active\">Add A New Collectible Item</a>\n\t</nav>\n\n\t<router-outlet></router-outlet>\n\t"
+            moduleId: module.id,
+            selector: 'collectible-view',
+            templateUrl: './collectible-view.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CollectibleViewComponent);
+    return CollectibleViewComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CollectibleViewComponent = CollectibleViewComponent;
+//# sourceMappingURL=collectible-view.component.js.map

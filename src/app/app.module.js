@@ -11,20 +11,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var collectible_form_component_1 = require('./collectible-form.component');
+var collectible_view_component_1 = require('./collectible-view.component');
+var collectible_list_component_1 = require('./collectible-list.component');
+var appRoutes = [
+    { path: 'collectible-view', component: collectible_view_component_1.CollectibleViewComponent },
+    { path: 'collectible-list', component: collectible_list_component_1.CollectibleListComponent },
+    { path: 'collectible-form', component: collectible_form_component_1.CollectibleFormComponent },
+    { path: '', redirectTo: '/collectible-list', pathMatch: 'full' }
+];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
+                router_1.RouterModule.forRoot(appRoutes),
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                collectible_form_component_1.CollectibleFormComponent
+                collectible_form_component_1.CollectibleFormComponent,
+                collectible_list_component_1.CollectibleListComponent,
+                collectible_view_component_1.CollectibleViewComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

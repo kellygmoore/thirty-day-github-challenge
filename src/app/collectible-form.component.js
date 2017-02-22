@@ -17,6 +17,9 @@ var CollectibleFormComponent = (function () {
         this.submitted = false;
     }
     CollectibleFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+    CollectibleFormComponent.prototype.newCollectible = function () {
+        this.model = new collectible_1.Collectible(3, '', '', '', '');
+    };
     CollectibleFormComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

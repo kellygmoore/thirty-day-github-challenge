@@ -17,6 +17,10 @@ export class CollectibleFormComponent {
 
   onSubmit() { this.submitted = true; }
 
+  newCollectible() {
+    this.model = new Collectible(3, '', '', '', '');
+  }
+
   // TODO: Remove this when we're done
   //get diagnostic() { return JSON.stringify(this.model); }
 

@@ -10,9 +10,12 @@ export class Collectible {
 
 }
 
+export class CollectibleList{
+	collectibles: Collectible[] = [
+		{ id: 5, name: 'Quilt', num: 'Hello', description: 'Test', located: 'near heaven'},
+		{ id: 6, name: 'Baby Gown', num: 'Hello', description: 'Test', located: 'near heaven'},
+		{ id: 7, name: 'Photo Album', num: 'Hello', description: 'Test', located: 'near heaven'}
+	
+	];
+}
 
-/*
-Copyright 2017 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

@@ -9,8 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var collectible_1 = require('./collectible');
+var myList = new collectible_1.CollectibleList();
 var CollectibleViewComponent = (function () {
     function CollectibleViewComponent() {
+        this.items = myList.collectibles;
     }
     CollectibleViewComponent = __decorate([
         core_1.Component({

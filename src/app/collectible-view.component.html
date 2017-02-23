@@ -1,1 +1,7 @@
-<h1>Collectible View Item Test Page</h1>
+<h1>Collectible List View Test Page</h1>
+
+<ul class="list">
+	<li *ngFor="let item of items">
+		<div>{{ item.name }}</div>
+	</li>
+</ul>

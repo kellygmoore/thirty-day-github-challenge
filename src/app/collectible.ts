@@ -2,9 +2,9 @@ export class Collectible {
 
 	id: number;
 	name: string = '';
-	num: string = '';
-	description?: string;
-	located?: string;
+	//num: string = '';
+	//description?: string;
+	//located?: string;
 
   	constructor(values: Object = {}) {
   		Object.assign(this, values);

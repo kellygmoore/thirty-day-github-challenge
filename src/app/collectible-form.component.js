@@ -9,16 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var collectible_1 = require('./collectible');
 var CollectibleFormComponent = (function () {
     function CollectibleFormComponent() {
-        this.worth = ['High Value', 'Heirloom', 'Keepsake', 'Giveaway'];
-        this.model = new collectible_1.Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
-        this.submitted = false;
     }
-    CollectibleFormComponent.prototype.onSubmit = function () {
-        this.submitted = true;
-    };
     CollectibleFormComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

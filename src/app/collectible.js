@@ -1,9 +1,11 @@
 "use strict";
 var Collectible = (function () {
+    //num: string = '';
+    //description?: string;
+    //located?: string;
     function Collectible(values) {
         if (values === void 0) { values = {}; }
         this.name = '';
-        this.num = '';
         Object.assign(this, values);
     }
     return Collectible;

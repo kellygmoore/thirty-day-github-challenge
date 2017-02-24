@@ -12,6 +12,7 @@ import { CollectibleDataService } from './collectible-data.service';
 export class CollectibleViewComponent {
 
 	newCollectible: Collectible = new Collectible();
+	
 
 	constructor(private collectibleDataService: CollectibleDataService) {
 	}

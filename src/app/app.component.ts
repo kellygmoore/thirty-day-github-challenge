@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { Collectible } from './collectible';
+import { CollectibleDataService } from './collectible-data.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
   template: `<h1>Kelly's Collectibles</h1>
 	  <nav>
@@ -9,6 +12,19 @@ import { Component } from '@angular/core';
 	</nav>
 
 	<router-outlet></router-outlet>
-	`
+	`,
+	providers: [ CollectibleDataService ]
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { 
+	// newCollectible: Collectible = new Collectible();
+
+	// constructor(private collectibleDataService: CollectibleDataService) {
+	// }
+
+	// addCollectible() {
+	// 	console.log("in appComponent.");
+	// 	this.collectibleDataService.addCollectible(this.newCollectible);
+	// 	this.newCollectible = new Collectible();
+	// }
+
+}

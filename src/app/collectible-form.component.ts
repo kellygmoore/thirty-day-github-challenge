@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Collectible, CollectibleList }    from './collectible';
+import { Collectible }    from './collectible';
 
 
 @Component({
@@ -10,15 +10,15 @@ import { Collectible, CollectibleList }    from './collectible';
 })
 export class CollectibleFormComponent {
 
-  worth = ['High Value', 'Heirloom', 'Keepsake', 'Giveaway'];
+  //worth = ['High Value', 'Heirloom', 'Keepsake', 'Giveaway'];
+  
+  //model = new Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
 
-  model = new Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
+  // submitted = false;
 
-  submitted = false;
-
-  onSubmit() { 
-    this.submitted = true; 
-  }
+  // onSubmit() { 
+  //   this.submitted = true; 
+  // }
 
   // TODO: Remove this when we're done
   //get diagnostic() { return JSON.stringify(this.model); }

@@ -1,7 +1,14 @@
 <h1>Collectible List View Test Page</h1>
 
-<ul class="list">
-	<li *ngFor="let item of items">
-		<div>{{ item.name }}</div>
-	</li>
-</ul>
+<section class="main">
+	<header class="header">
+		<h3>List of Collectibles</h3>
+			<ul class="collectible-list">
+				<li *ngFor="let item of collectibles">
+					<div class="view">
+						<label>{{ item.name }}</label>
+					</div>
+				</li>
+			</ul>
+		</header>
+	</section>

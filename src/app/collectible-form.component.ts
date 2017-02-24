@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { Collectible }    from './collectible';
+import { Collectible, CollectibleList }    from './collectible';
+
 
 @Component({
   moduleId: module.id,
@@ -15,10 +16,8 @@ export class CollectibleFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
-
-  newCollectible() {
-    this.model = new Collectible(3, '', '', '', '');
+  onSubmit() { 
+    this.submitted = true; 
   }
 
   // TODO: Remove this when we're done

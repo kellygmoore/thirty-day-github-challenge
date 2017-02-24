@@ -10,18 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var collectible_1 = require('./collectible');
-var myList = new collectible_1.CollectibleList();
+var collectible_data_service_1 = require('./collectible-data.service');
 var CollectibleViewComponent = (function () {
-    function CollectibleViewComponent() {
-        this.items = myList.collectibles;
+    function CollectibleViewComponent(collectibleDataService) {
+        this.collectibleDataService = collectibleDataService;
+        this.newCollectible = new collectible_1.Collectible();
     }
+    CollectibleViewComponent.prototype.addCollectible = function () {
+        this.collectibleDataService.addCollectible(this.newCollectible);
+        this.newCollectible = new collectible_1.Collectible();
+    };
     CollectibleViewComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'collectible-view',
-            templateUrl: './collectible-view.component.html'
+            templateUrl: './collectible-view.component.html',
+            providers: [collectible_data_service_1.CollectibleDataService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [collectible_data_service_1.CollectibleDataService])
     ], CollectibleViewComponent);
     return CollectibleViewComponent;
 }());

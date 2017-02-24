@@ -37,8 +37,8 @@
                #located="ngModel">
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!collectibleForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default" (click)="newCollectible(); collectibleForm.reset()">New Collectible</button>
+      <button type="submit" class="btn btn-success" (click)="addCollectible()" [disabled]="!collectibleForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newCollectible(); collectibleForm.reset()">Reset Collectible</button>
 
      <!-- NOT SHOWN IN DOCS -->
       <!-- <div>
@@ -52,19 +52,19 @@
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <div class="row">
-      <div class="col-xs-3">Collectible Name</div>
+      <div class="col-xs-3">Collectible Name:</div>
       <div class="col-xs-9  pull-left">{{ model.name }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Collectible Worth</div>
+      <div class="col-xs-3">Collectible Worth:</div>
       <div class="col-xs-9 pull-left">{{ model.num }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Collectible Description</div>
+      <div class="col-xs-3">Collectible Description:</div>
       <div class="col-xs-9 pull-left">{{ model.description }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Collectible Location</div>
+      <div class="col-xs-3">Collectible Location:</div>
       <div class="col-xs-9 pull-left">{{ model.located }}</div>
     </div>
     <br>

@@ -16,9 +16,8 @@ var CollectibleFormComponent = (function () {
         this.model = new collectible_1.Collectible(2, 'Quilt', this.worth[0], 'made by Grandma Baker in 1940.', 'master bedroom closet');
         this.submitted = false;
     }
-    CollectibleFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-    CollectibleFormComponent.prototype.newCollectible = function () {
-        this.model = new collectible_1.Collectible(3, '', '', '', '');
+    CollectibleFormComponent.prototype.onSubmit = function () {
+        this.submitted = true;
     };
     CollectibleFormComponent = __decorate([
         core_1.Component({

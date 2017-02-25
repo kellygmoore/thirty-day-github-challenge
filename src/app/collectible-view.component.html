@@ -11,7 +11,7 @@
 	<button type="submit" class="btn btn-success" (click)="addCollectible()">Add</button>
 </div>
 
-<!-- <section class="main">
+<section class="main" *ngIf="collectibles?.length > 0">
 	<header class="header">
 		<h3>List of Collectibles</h3>
 		<ul class="collectible-list">
@@ -22,4 +22,4 @@
 			</li>
 		</ul>
 	</header>
-</section> -->
+</section>

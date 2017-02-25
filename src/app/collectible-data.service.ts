@@ -6,17 +6,18 @@ export class CollectibleDataService {
 
 	lastId: number = 0;
 
-	collectibles: Collectible[] = [];
+	collectibles: Collectible[] = [{id: 1, name: 'testcase'}];
 
 
 	constructor() {
 	}
 
-	addCollectible(items: Collectible): CollectibleDataService {
-		if (!items.id) {
-			items.id = ++this.lastId;
+	addCollectible(collectible: Collectible): CollectibleDataService {
+		console.log("Items: ", collectible);
+		if (!collectible.id) {
+			collectible.id = ++this.lastId;
 		}
-		this.collectibles.push(items);
+		this.collectibles.push(collectible);
 		console.log("array: ", this.collectibles);
 		return this;
 	}

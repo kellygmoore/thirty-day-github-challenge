@@ -12,13 +12,14 @@ var core_1 = require('@angular/core');
 var CollectibleDataService = (function () {
     function CollectibleDataService() {
         this.lastId = 0;
-        this.collectibles = [];
+        this.collectibles = [{ id: 1, name: 'testcase' }];
     }
-    CollectibleDataService.prototype.addCollectible = function (items) {
-        if (!items.id) {
-            items.id = ++this.lastId;
+    CollectibleDataService.prototype.addCollectible = function (collectible) {
+        console.log("Items: ", collectible);
+        if (!collectible.id) {
+            collectible.id = ++this.lastId;
         }
-        this.collectibles.push(items);
+        this.collectibles.push(collectible);
         console.log("array: ", this.collectibles);
         return this;
     };

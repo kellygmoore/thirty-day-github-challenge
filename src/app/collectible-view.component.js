@@ -17,12 +17,22 @@ var CollectibleViewComponent = (function () {
         this.newCollectible = new collectible_1.Collectible();
     }
     CollectibleViewComponent.prototype.addCollectible = function () {
+        console.log("In collectible-view component export addCollectible.");
         this.collectibleDataService.addCollectible(this.newCollectible);
         this.newCollectible = new collectible_1.Collectible();
     };
+    Object.defineProperty(CollectibleViewComponent.prototype, "collectibles", {
+        get: function () {
+            return this.collectibleDataService.getAllCollectibles();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    CollectibleViewComponent.prototype.ngOnInit = function () {
+    };
     CollectibleViewComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
+            //moduleId: module.id,
             selector: 'collectible-view',
             templateUrl: './collectible-view.component.html',
             providers: [collectible_data_service_1.CollectibleDataService]

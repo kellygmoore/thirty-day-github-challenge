@@ -10,18 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var CollectibleDataService = (function () {
+    // [{id: 1, name: 'testcase'}];
     function CollectibleDataService() {
         this.lastId = 0;
-        this.collectibles = [{ id: 1, name: 'testcase' }];
+        this.collectibles = [];
     }
     CollectibleDataService.prototype.addCollectible = function (collectible) {
-        console.log("Items: ", collectible);
+        console.log("In collectible-data service, item added: ", collectible);
         if (!collectible.id) {
             collectible.id = ++this.lastId;
         }
         this.collectibles.push(collectible);
-        console.log("array: ", this.collectibles);
+        console.log("array: ", this.collectibles + "this: ", this);
         return this;
+    };
+    CollectibleDataService.prototype.getAllCollectibles = function () {
+        return this.collectibles;
     };
     CollectibleDataService = __decorate([
         core_1.Injectable(), 
